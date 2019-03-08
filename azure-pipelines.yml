@@ -1,5 +1,13 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
+
 pool:
-  vmImage: Hosted Ubuntu 1604
+  vmImage: 'Ubuntu-16.04'
   demands: npm
 
 steps:
@@ -29,3 +37,4 @@ steps:
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
+
